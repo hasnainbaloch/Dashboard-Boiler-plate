@@ -1,12 +1,13 @@
 import React from 'react';
-import './home.css'
+import { SocketContext } from '../../../context';
+import './home.css';
 
-function Home() {
+function Home({socket}) {
     return (
         <div className="home">
-            I am home!
+            I am home! and {socket}
         </div>
     )
 }
 
-export default Home
+export default Home;

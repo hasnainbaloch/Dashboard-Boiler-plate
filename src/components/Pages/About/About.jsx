@@ -1,9 +1,9 @@
 import React from 'react'
 
-function About() {
+function About({socket}) {
     return (
         <div>
-            I am About!
+            I am About! {socket*10}!!
         </div>
     )
 }
