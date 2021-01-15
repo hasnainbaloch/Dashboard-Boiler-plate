@@ -1,7 +1,7 @@
 import React from 'react';
 import './DashboardLayout.css';
 
-import { Header, Footer, Sidebar } from '../../View';
+import { Header, Footer, Sidebar } from '../../components/View';
 
 function DashboardLayout({ children, ...rest }) {
     

@@ -1,6 +1,6 @@
 import React from 'react';
 import './LandingLayout.css';
-import { Footer } from '../../View';
+import { Footer } from '../../components/View';
 
 import { Link } from 'react-router-dom';
 
