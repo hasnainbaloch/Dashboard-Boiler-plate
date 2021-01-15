@@ -1,2 +1,2 @@
-export {default as PrivateRoute} from './DashboardLayout/DashboardLayout';
-export {default as PublictRoute} from './LandingLayout/LandingLayout';
+export {default as DashboardLayout} from './DashboardLayout/DashboardLayout';
+export {default as LandingLayout} from './LandingLayout/LandingLayout';
