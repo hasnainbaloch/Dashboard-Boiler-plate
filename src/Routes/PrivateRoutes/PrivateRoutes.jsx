@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
-import { DashboardLayout } from "../../Layout";
+import { DashboardLayout } from "../../layout";
 
 function PrivateRoutes({ component: Component, ...rest }) {
     return (

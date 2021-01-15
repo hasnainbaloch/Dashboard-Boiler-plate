@@ -1,6 +1,6 @@
 import React from "react";
 import { Redirect, Route } from 'react-router-dom';
-import { LandingLayout } from '../../Layout'
+import { LandingLayout } from '../../layout'
 
 const PublictRoute = ({ component: Component, ...rest }) => {
     return (

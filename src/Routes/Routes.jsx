@@ -1,4 +1,4 @@
-import { PrivateRoute, PublictRoute } from "../Routes";
+import { PrivateRoute, PublictRoute } from ".";
 import { 
     Landing, 
     Home, 
