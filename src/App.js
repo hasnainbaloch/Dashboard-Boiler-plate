@@ -1,28 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { Routes } from "./routes";
 import { SocketContext } from './context';
+import { socket } from './config';
 
 function App() {
 
-  const [fakeSocket, setFakeSocket] = useState(null)
-  let count = 0;
+  const [Socket, setSocket] = useState('not connected yet');
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      count++;
-      setFakeSocket(count+" Fake socket count");
-    }, 1000);
-    setTimeout(() => {
-      clearInterval(interval);
-    }, 10000);
+    console.log("Socket", socket);
     return () => {
-      clearInterval(interval);
+      // clearInterval(socketInterval);
     }
   }, []);
 
 
   return (
-    <SocketContext.Provider value={fakeSocket}>
+    <SocketContext.Provider value={socket}>
       <Routes />
     </SocketContext.Provider>
   );

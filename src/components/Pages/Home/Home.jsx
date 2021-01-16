@@ -1,11 +1,20 @@
-import React from 'react';
-import { SocketContext } from '../../../context';
+import React, { useEffect, useState } from 'react';
 import './home.css';
 
 function Home({socket}) {
+
+
+    const [socketData, setData] = useState(null);
+
+    useEffect(() => {
+        socket.on('cnicRecord', (data) => {
+            setData(data);
+        });        
+    }, []);
+
     return (
         <div className="home">
-            I am home! and {socket}
+            I am home! and {socketData?.cnic}
         </div>
     )
 }
