@@ -1,20 +1,163 @@
 import React, { useEffect, useState } from 'react';
-import './home.css';
+import './home.scss';
 
 function Home({socket}) {
 
 
-    const [socketData, setData] = useState(null);
+    const [socketData, setData] = useState([]);
 
     useEffect(() => {
-        socket.on('cnicRecord', (data) => {
-            setData(data);
+        socket.on('cnicRecord', async (data) => {
+            setData(prevData => [...prevData, data]);
         });        
-    }, []);
+    }, [socket]);
 
     return (
         <div className="home">
-            I am home! and {socketData?.cnic}
+            I am home! and {socketData && socketData.map(cnic => (
+                <p>CNIC: {cnic.cnic}</p>
+            ))}
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <p>lorem </p>
+            <hr/>
         </div>
     )
 }

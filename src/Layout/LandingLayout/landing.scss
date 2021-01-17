@@ -1,27 +1,25 @@
-.layout{
+.landing_layout{
     display: flex;
 }
-.header{
+.landing_header{
     background-color: rgb(168, 168, 168);
     padding: 20px;
     margin: 0;
     box-sizing: border-box;
     height: 75px;
+    z-index: 999;
 }
-.sidebar{
-    width: 15vw;
-    min-width: 200px;
-    background-color: cornflowerblue;
-    height: calc(100vh - 115px);
+.landing_body{
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 50px;
 }
-.body{
-    width: 85vw;
-    height: calc(100vh - 115px);
-}
-.footer{
+.landing_footer{
     height: 40px;
     width: 100vw;
     background-color: cadetblue;
     line-height:1;
     padding: 10px;
+    position: fixed;
+    bottom: 0;
 }

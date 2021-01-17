@@ -1,5 +1,5 @@
 import React from 'react';
-import './LandingLayout.css';
+import './landing.scss';
 import { Footer } from '../../components/View';
 
 import { Link } from 'react-router-dom';
@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function LandingLayout({ children, ...rest }) {
     return (
         <>
-            <div className="header">
+            <div className="landing_header">
                 <div>
                     <nav>
                         <ul>
@@ -20,12 +20,12 @@ function LandingLayout({ children, ...rest }) {
                     </nav>
                 </div>
             </div>
-            <div className="layout">
-                <div className="body">
+            <div className="landing_layout">
+                <div className="landing_body">
                     {children}
                 </div>
             </div>
-            <div className="footer">
+            <div className="landing_footer">
                 <Footer />
             </div>
         </>

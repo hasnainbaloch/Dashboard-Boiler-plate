@@ -1,27 +1,27 @@
 import React from 'react';
-import './DashboardLayout.css';
+import './dashboard.scss';
 
 import { Header, Footer, Sidebar } from '../../components/View';
 
 function DashboardLayout({ children, ...rest }) {
     
     return (
-        <>
-            <div className="header1">
+        <div className="dashboard_wrap">
+            <div className="dashboard_header">
                 <Header />
             </div>
-            <div className="layout">
-                <div className="sidebar">
+            <div className="dashboard_layout">
+                <div className="dashboard_sidebar">
                     <Sidebar />
                 </div>
-                <div className="body">
+                <div className="dashboard_body">
                     {children}
                 </div>
             </div>
-            <div className="footer">
+            <div className="dashboard_footer">
                 <Footer />
             </div>
-        </>
+        </div>
     )
 }
 
