@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './home.scss';
+import  {Title, Button } from '../../../style';
 
 function Home({socket}) {
 
@@ -15,10 +15,10 @@ function Home({socket}) {
     return (
         <div className="home">
             I am home! and {socketData && socketData.map(cnic => (
-                <p>CNIC: {cnic.cnic}</p>
+                <Title>CNIC: {cnic.cnic}</Title>
             ))}
-            <p>lorem </p>
-            <p>lorem </p>
+            <Title>lorem </Title>
+            <Button>lorem </Button>
             <p>lorem </p>
             <p>lorem </p>
             <p>lorem </p>
