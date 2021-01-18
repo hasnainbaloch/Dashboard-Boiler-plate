@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import {login} from '../../../utils';
 
 import { useHistory } from "react-router-dom";
+import { FormWrapper } from './login.style';
+import { Button, Input } from '../../../style';
 
 
 function Login() {
@@ -17,18 +19,19 @@ function Login() {
     }
 
     return (
-        <div>
+        <FormWrapper>
             <form>
                 <label htmlFor="name">
-                    <input type="text" name="name" id="name" value={name} placeholder="type your name" onChange={(e) => setName(e.target.value)}/>
+                    <Input type="text" name="name" id="name" value={name} placeholder="type your name" onChange={(e) => setName(e.target.value)}/>
                 </label>
                 <br/>
                 <label htmlFor="password">
-                    <input type="password" name="password" id="password" value={password} placeholder="type your password" onChange={(e) => setPassword(e.target.value)}/>
+                    <Input type="password" name="password" id="password" value={password} placeholder="type your password" onChange={(e) => setPassword(e.target.value)}/>
                 </label>
-                <button type="submit" onClick={(e) => loginUser(e)}>Login</button>
+                <br/>
+                <Button type="submit" onClick={(e) => loginUser(e)}>Login</Button>
             </form>
-        </div>
+        </FormWrapper>
     )
 }
 

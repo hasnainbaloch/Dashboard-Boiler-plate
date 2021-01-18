@@ -2,5 +2,6 @@ export {
     Button,
     Title,
     Title2,
-    Example
-} from './common'
+    Example,
+    Input
+} from './style.common'

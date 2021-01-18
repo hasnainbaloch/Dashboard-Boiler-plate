@@ -7,10 +7,11 @@ export const  Button = styled.button`
     padding: 10px;
     border-radius: 2px;
     width: 200px;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     text-transform: capitalize;
     letter-spacing: 0.5px;
     outline: none;
+    box-sizing: border-box;
     &:hover{
         cursor: pointer;
         box-shadow: 0 4px 3px 3px rgba(21,23,34,0.2);
@@ -39,5 +40,13 @@ export const  Example = styled.p`
     font-size: 2rem;
     color: #000000;
     margin: ${({margin}) => margin || `20px`};
+`;
+
+export const Input = styled.input`
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: ${({margin}) => margin || `20px`};
+    width: 100%;
+    height: 35px;
 `;
 
