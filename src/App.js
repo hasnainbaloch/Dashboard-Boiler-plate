@@ -1,14 +1,14 @@
 import React from "react";
-import { Routes } from "./routes";
-import { SocketContext } from './context';
-import { socket } from './config';
+import Todo from "./components/Todo";
+import TodoList from "./components/TodoList";
 
 function App() {
 
   return (
-    <SocketContext.Provider value={socket}>
-      <Routes />
-    </SocketContext.Provider>
+    <>
+      <Todo />
+      <TodoList />
+    </>
   );
 }
 
