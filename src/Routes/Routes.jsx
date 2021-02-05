@@ -24,12 +24,14 @@ function Routes() {
                     <Switch>   
                         {/* Redirect to landing Layout   */}
                         <Route path="/" exact>
-                            <Redirect to="/landing" />
+                            <Redirect to="/login" />
                         </Route>
                         
-                        {/* Landing Layout with public route  */}
-                        <PublictRoute path="/landing" exact component={Landing} />
+                        {/* Login Route */}
                         <PublictRoute path="/login" exact component={Login} />
+
+                        {/* Landing Layout with public route  */}
+                        <PublictRoute path="/landing" exact component={Landing} layout={true} />
                         
                         {/* Dashboard Layout  with private route  */}
                         <PrivateRoute path="/dashboard" exact component={Home} socket={socket} />
